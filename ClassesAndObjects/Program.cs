@@ -6,8 +6,8 @@ namespace ClassesAndObjects
     {
         static void Main(string[] args)
         {
-            Profile sam = new Profile("Sam Drakkila", 30, "New York", "USA", "he/him");
-            sam.SetHobbies(new string[] { "hobby1", "hobby2"});
+            Profile sam = new Profile("XxveryCoolxX", 20, "assassin creed valhalla");
+            sam.SetHobbies(new string[] { "every", "single", "assasin", "creed", "game"});
             Console.WriteLine(sam.ViewProfile());
         }
     }

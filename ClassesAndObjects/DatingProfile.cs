@@ -8,37 +8,32 @@ namespace ClassesAndObjects
 
         class Profile
         {
-            private string name;
-            private int age;
-            private string city;
-            private string country;
-            private string pronouns;
-            private string[] hobbies;
+            private string gamerUsername;
+            private int steamGamesAmount;
+            private string favGame;
+            private string[] favGamesList;
 
-            public Profile(string name, int age, string city, string country, string pronouns = "they/them")
+            public Profile(string gamerUsername, int steamGamesAmount, string favGame)
             {
 
-                this.name = name;
-                this.age = age;
-                this.city = city;
-                this.country = country;
-                this.pronouns = pronouns;
-
+                this.gamerUsername = gamerUsername;
+                this.steamGamesAmount = steamGamesAmount;
+                this.favGame = favGame;
             }
             public string ViewProfile()
             {
 
                 string hobbiesString = "";
-                foreach (string i in this.hobbies)
+                foreach (string i in this.favGamesList)
                 {
                     hobbiesString += $"{i}\n";
 
                 }
-                return $"Name: {this.name}, age: {this.age}, city: {this.city}, country: {this.country}, pronouns: {this.pronouns}\nHobbies:\n{hobbiesString}";
+            return $"Username: {gamerUsername}\nAmount of games: {steamGamesAmount}\nFav game: {favGame}\nFav game list:\n{hobbiesString}";
             }
             public void SetHobbies(string[] hobbies)
             {
-                this.hobbies = hobbies;
+                this.favGamesList = hobbies;
             }
         }
     
